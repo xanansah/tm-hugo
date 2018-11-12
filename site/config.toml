@@ -19,7 +19,7 @@ destination = "../dist/"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 # Enable this to have links relativized by Hugo
-# E.g,  if your /post/first/ page contains a link 
+# E.g,  if your /post/first/ page contains a link
 # to /about/, Hugo will rewrite the URL to ../../about/
 relativeURLs = false
 
@@ -48,6 +48,7 @@ author = "Your name"
   identifier = "home"
   url = "/"
 
+
 # Related Content
 # ---------------
 # Enable the options below to use Hugo's related
@@ -73,4 +74,3 @@ author = "Your name"
 #   name = "date"
 #   pattern = "2006"
 #   weight = 10
-
