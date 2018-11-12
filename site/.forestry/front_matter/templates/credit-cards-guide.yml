@@ -37,3 +37,5 @@ fields:
   name: slug
   label: slug
   default: credit-cards
+pages:
+- "./site/content/credit-cards/somewhere-to-live-maybe.md"
