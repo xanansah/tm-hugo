@@ -1,0 +1,35 @@
+---
+label: Credit Cards Guide
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  default: credit-card
+  hidden: true
+  config:
+    required: true
+  label: Type
+  name: type
+- type: text
+  label: Category
+  name: category
+  config:
+    required: false
+  hidden: true
+  default: Credit Cards
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: description
+  label: Description
+- type: field_group
+  name: author
+  label: Author
+  fields:
+  - type: text
+    name: author_name
+    label: Author Name
+  - type: text
+    name: author_title
+    label: Author Job Title
