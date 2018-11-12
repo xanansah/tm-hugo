@@ -33,6 +33,7 @@ fields:
   - type: text
     name: author_title
     label: Author Job Title
-pages:
-- "./site/content/credit-cards.md"
-- "./site/content/credit-cards/site/content/credit-cards/here-again.md"
+- type: text
+  name: slug
+  label: slug
+  default: credit-cards
