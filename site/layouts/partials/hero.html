@@ -1,0 +1,18 @@
+<div class="header__content">
+  <div class="header__category">{{ $.Param "category" }}</div>
+  <h1 class="header__heading">{{ .Page.Title }}</h1>
+  <h2>{{ $.Param "sub_heading" }}</h2>
+  <time class="header__date">{{ .PublishDate.Format "January 2, 2006" }}</time>
+  <div class="header__author">
+    <div class="header__authorImage">
+    </div>
+    <div>
+      <span class="header__authorName">
+        {{ $.Param "author_name" }}
+      </span>
+      <time class="header__authorTitle">
+        {{ $.Param "author_title" }}
+      </time>
+    </div>
+  </div>
+</div>

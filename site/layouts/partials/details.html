@@ -1,0 +1,21 @@
+<a class="post--category" href="#">{{ $.Param "category" }}</a>
+<h1 class="post--title">{{ .Page.Title }}</h1>
+<h3 class="post--description">{{ $.Param "sub_heading" }}</h3>
+<div class="post--meta">
+  <div class="author">
+    <span class="post--meta-label">Written by</span>
+    <a href="#" class="author--wrapper">
+      <div class="author--avatar">
+        <img src="" alt="{{ $.Param "author_name" }}">
+      </div>
+      <div class="author--info">
+        <span class="author--name">{{ $.Param "author_name" }}</span>
+        <span class="author--title">{{ $.Param "author_title" }}</span>
+      </div>
+    </a>
+  </div>
+  <div class="post--info">
+    <span class="post--meta-label">Posted on</span>
+    <span class="post--date">{{ .PublishDate.Format "January 2, 2006" }}</span>
+  </div>
+</div>
