@@ -33,9 +33,3 @@ fields:
   - type: text
     name: author_title
     label: Author Job Title
-- type: text
-  name: slug
-  label: slug
-  default: credit-cards
-pages:
-- "./site/content/credit-cards/somewhere-to-live-maybe.md"
