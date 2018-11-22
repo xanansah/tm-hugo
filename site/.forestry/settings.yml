@@ -12,8 +12,10 @@ sections:
 - type: directory
   path: "./site/content/free-credit-report"
   label: Free credit report
-  create: all
+  create: documents
   match: "**/*"
+  templates:
+  - credit-report-guide
 - type: directory
   path: "./site/content/mortgages"
   label: Mortgages
