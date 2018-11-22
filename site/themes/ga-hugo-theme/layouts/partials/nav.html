@@ -1,0 +1,10 @@
+{{ range .Site.Menus.main }}
+   <a href="{{ .URL }}" title="{{ .Name }}">
+     {{- .Name -}}
+     {{/* {{- with .i -}}
+       <span class="date">
+       {{- dateFormat " (2006-01-02)" .Date -}}
+       </span>
+     {{- end -}} */}}
+   </a>
+ {{ end }}

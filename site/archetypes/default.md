@@ -1,5 +1,6 @@
 ---
-title: "{{ replace .TranslationBaseName '-' ' ' | title }}"
-date: "{{ .Date }}"
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+author: "Alex Owusu-Ansah"
 draft: true
 ---

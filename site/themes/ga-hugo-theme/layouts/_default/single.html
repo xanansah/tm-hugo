@@ -1,0 +1,27 @@
+<html>
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>{{ .Site.Title }} | {{ .Page.Title }}</title>
+</head>
+<body>
+     {{ partial "header" (dict "Kind" .Kind "Template" "Single") }}
+
+     <ul>
+        <li><a href="/">Guides Home</li>
+       {{ range .Site.Sections.ByWeight }}
+        <li><a href="{{ .URL }}">{{ replace .Title "Guides" "" }}</a></li>
+       {{ end }}
+     </ul>
+
+     <div style="margin:25px;">
+          {{if .Params.service }}<p>{{ .Params.Service }}</p>{{ end }}
+          <h1>{{.Title}}</h1>
+          <div style="color:grey; font-size:16px;">{{ dateFormat "January 2, 2006" .Date }}</div>
+          <div style="color:grey; font-size:16px;">{{if .Params.author}}By {{.Params.Author}}{{end}}</div>
+          <div style="font-size:18px;">{{.Content}}</div>
+     </div>
+     {{ partial "footer" . }}
+</body>
+</html>

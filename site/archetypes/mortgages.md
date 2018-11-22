@@ -11,12 +11,12 @@ seo:
     card: {{ .seo.twitter.card }}
     site: {{ .seo.twitter.site }}
 canonical: {{ .Canonical }}
-service: "Credit Cards"
+service: "Mortgages"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 author_name: "TotallyMoney"
 author_title: ""
-categories: [ "Credit Cards" ]
-tags: [ "Credit Cards" ]
+categories: [ "Mortgages" ]
+tags: [ "Mortgages" ]
 draft: true
 ---

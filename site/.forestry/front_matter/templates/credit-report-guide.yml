@@ -1,5 +1,5 @@
 ---
-label: Credit Cards Guide
+label: Credit Report Guide
 hide_body: false
 is_partial: false
 fields:
@@ -15,7 +15,7 @@ fields:
 - type: text
   name: service
   label: Service
-  default: Credit Cards
+  default: Credit Report
   description: The TotallyMoney service this guide is for.
   hidden: true
 - type: text
@@ -42,19 +42,15 @@ fields:
   label: Categories
   description: The categories this guide falls into.
   default:
-  - Credit Cards
+  - Credit Report
 - type: tag_list
   name: tags
   label: Tags
   description: The tags relevant to this guide.
   default:
-  - Credit Cards
-- type: file
-  name: banner_image
-  label: Banner Image
-  description: Banner image for the guide.
+  - Credit Report
 pages:
-- content/credit-cards/twenty.md
-- content/credit-cards/nineteen.md
-- content/credit-cards/eighteen.md
-- content/credit-cards/sixteen.md
+- content/free-credit-report/lianne-la-havas.md
+- content/free-credit-report/abokado.md
+- content/free-credit-report/the-mildred-snitzer-orchestra.md
+- content/free-credit-report/cabbage.md

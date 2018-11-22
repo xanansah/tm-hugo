@@ -1,5 +1,5 @@
 ---
-label: Credit Cards Guide
+label: Mortgages Guide
 hide_body: false
 is_partial: false
 fields:
@@ -10,12 +10,12 @@ fields:
 - type: include
   name: seo
   label: SEO
-  description: Search engine optimisation configuration for this TotallyMoney guide.
   template: seo
+  description: Search engine optimisation configuration for this TotallyMoney guide.
 - type: text
   name: service
   label: Service
-  default: Credit Cards
+  default: Mortgages
   description: The TotallyMoney service this guide is for.
   hidden: true
 - type: text
@@ -42,19 +42,14 @@ fields:
   label: Categories
   description: The categories this guide falls into.
   default:
-  - Credit Cards
+  - Mortgages
 - type: tag_list
   name: tags
   label: Tags
   description: The tags relevant to this guide.
   default:
-  - Credit Cards
-- type: file
-  name: banner_image
-  label: Banner Image
-  description: Banner image for the guide.
+  - Mortgages
 pages:
-- content/credit-cards/twenty.md
-- content/credit-cards/nineteen.md
-- content/credit-cards/eighteen.md
-- content/credit-cards/sixteen.md
+- content/mortgages/summer-walker.md
+- content/mortgages/jenna.md
+- content/mortgages/kigali.md

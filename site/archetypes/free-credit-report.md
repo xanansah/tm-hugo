@@ -10,13 +10,14 @@ seo:
   twitter:
     card: {{ .seo.twitter.card }}
     site: {{ .seo.twitter.site }}
-canonical: {{ .Canonical }}
-service: "Credit Cards"
+canonical: {{ .canonical }}
+service: "Free Credit Report"
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
+lastmod: {{ .Lastmod }}
 author_name: "TotallyMoney"
 author_title: ""
-categories: [ "Credit Cards" ]
-tags: [ "Credit Cards" ]
+categories: [ "Credit Report" ]
+tags: [ "Credit Report" ]
 draft: true
 ---

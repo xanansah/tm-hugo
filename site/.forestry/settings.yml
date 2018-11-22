@@ -1,27 +1,45 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path: ''
+webhook_url: https://hooks.slack.com/services/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
 sections:
 - type: directory
-  path: "./site/content"
+  path: content
   label: Pages
   create: all
   match: "*"
 - type: directory
-  path: "./site/content/posts"
-  label: Posts
+  path: content/free-credit-report
+  label: Free Credit Report
   create: all
   match: "**/*"
+  templates:
+  - credit-report-guide
 - type: directory
-  path: "./site/content/credit-cards"
-  label: Credit cards
+  path: content/mortgages
+  label: Mortgages
   create: all
   match: "**/*"
-upload_dir: hugo/uploads
+  templates:
+  - mortgages-guide
+- type: directory
+  path: content/credit-cards
+  label: Credit Cards
+  create: all
+  match: "**/*"
+  templates:
+  - credit-cards-guide
+- type: directory
+  path: content/loans
+  label: Loans
+  create: all
+  match: "**/*"
+  templates:
+  - loans-guide
+upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":year:/:month:/:day:/:filename:"
+file_template: ":filename:"
 version: '0.51'
