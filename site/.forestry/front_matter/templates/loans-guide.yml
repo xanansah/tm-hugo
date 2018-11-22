@@ -1,0 +1,51 @@
+---
+label: Loans Guide
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: canonical
+  label: Canonical
+  description: Search engine friendly URL. The URL that you want visitors to see.
+- type: include
+  name: seo
+  label: SEO
+  description: Search engine optimisation configuration for this TotallyMoney guide.
+  template: seo
+- type: text
+  name: service
+  label: Service
+  default: Loans
+  description: The TotallyMoney service this guide is for.
+  hidden: true
+- type: text
+  name: title
+  label: Title
+  description: The title of the guide.
+- type: datetime
+  name: date
+  label: Date
+  description: The date of publishing this guide.
+  config:
+    display_utc: false
+- type: text
+  name: author_name
+  label: Author Name
+  description: The name of the author of the guide.
+  default: TotallyMoney
+- type: text
+  name: author_title
+  label: Author Job Title
+  description: The job title of the author of the guide.
+- type: tag_list
+  name: categories
+  label: Categories
+  description: The categories this guide falls into.
+  default:
+  - Loans
+- type: tag_list
+  name: tags
+  label: Tags
+  description: The tags relevant to this guide.
+  default:
+  - Loans
