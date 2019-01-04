@@ -25,8 +25,8 @@ module.exports = function(env) {
     {
       styles: Object.assign(
         {
-          src: config.src + "css/*.css",
-          watch: config.src + "css/**/*.css",
+          src: config.src + "less/styles.less",
+          watch: config.src + "less/**/*.less",
           dest: config.dest + "static/css",
           tmp: config.tmp + "css",
         },

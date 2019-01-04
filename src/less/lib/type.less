@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=latin-ext');
+
+.font-size(@size: 1.6, @line: @size * 1.3) {
+    font-size: @size * 1rem;
+    line-height: @line * 1rem;
+}
+
+a {
+    cursor: pointer;
+    font-size: inherit;
+    transition-property: color;
+    transition-duration: .2s;
+    color: @TM-blue;
+    outline: none;
+    text-decoration: none;
+
+    &:hover {
+        color: @TM-orange;
+        cursor: pointer;
+    }
+
+    &:active {
+        color: @TM-orange;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+li,
+p,
+ul {
+    .font-size(1.3);
+}
+
+.typeface-sans {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.typeface-arial {
+    font-family: Arial, "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
+}
+
+* {
+    .typeface-sans;
+}
+
+html {
+    .typeface-sans;
+    height: 100%;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    .font-size(1.3);
+    -webkit-font-smoothing: antialiased;
+}
+
+.heading,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    .typeface-sans;
+    font-weight: 400;
+    color: @text-colour;
+    margin: 0 0 .5em;
+}
+
+h1 {
+    .font-size(2.5);
+
+    @media @screen-M-plus {
+        .font-size(3.6);
+    }
+}
+
+h2 {
+    .font-size(1.8);
+
+    @media @screen-M-plus {
+        .font-size(2.4);
+    }
+}
+
+h3 {
+    .font-size(1.5);
+
+    @media @screen-M-plus {
+        .font-size(1.8);
+    }
+}
+
+h4 {
+    .font-size(1.3);
+
+    @media @screen-M-plus {
+        .font-size(1.6);
+    }
+}
+
+h5 {
+    .font-size(1.2);
+
+    @media @screen-M-plus {
+        .font-size(1.3);
+    }
+}
+
+h6 {
+    .font-size(1.2);
+
+    @media @screen-M-plus {
+        .font-size(1.2);
+    }
+}
+
+sup {
+    font-size: .8em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+.text--small {
+    .font-size(1);
+
+    @media @screen-M-plus {
+        .font-size(1.1);
+    }
+}
+
+p {
+    .font-size(1.2);
+    color: @text-colour;
+    margin: 0 0 .5em;
+
+    @media @screen-M-plus {
+        .font-size(1.3);
+    }
+
+    a {
+        font-size: inherit;
+    }
+}

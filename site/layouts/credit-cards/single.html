@@ -2,11 +2,12 @@
   {{ partial "head" . }}
 
   <body>
+    {{ partial "tm-global-nav" . }}
     {{ partial "nav" . }}
 
     <div style="margin:25px;">
       {{if .Params.service }}<p>{{ .Params.Service }}</p>{{ end }}
-      <h1>{{.Title}}</h1>
+      <h1 class="header">{{.Title}}</h1>
       <div style="color:grey; font-size:16px;">{{ dateFormat "January 2, 2006" .Date }}</div>
       <div style="color:grey; font-size:16px;">By <br>{{if .Params.author_name}}{{.Params.author_name}}{{end}}<br>{{if .Params.author_title}}{{.Params.author_title}}{{end}}</div>
       <div style="font-size:18px;">{{.Content}}</div>

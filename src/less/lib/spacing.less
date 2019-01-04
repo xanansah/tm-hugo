@@ -1,0 +1,32 @@
+// Cap-height of the base-0 font size
+@cap: 10px;
+
+@spacer-none: 0;
+@spacer-2xs: round(@cap * .5);
+@spacer-xs: @cap;
+@spacer-sm: round(@cap * 1.5);
+@spacer-md: round(@cap * 2.5);
+@spacer-lg: round(@cap * 4);
+@spacer-xl: round(@cap * 6.5);
+@spacer-2xl: round(@cap * 10.5);
+
+.container-padding {
+    padding-right: @spacer-sm;
+    padding-left: @spacer-sm;
+
+    @media @screen-M {
+        padding-right: @spacer-md;
+        padding-left: @spacer-md;
+    }
+    @media @screen-L-plus {
+        padding-right: @spacer-lg;
+        padding-left: @spacer-lg;
+    }
+
+    @media @screen-XL {
+        padding-right: 0;
+        padding-left: 0;
+        width: 1200px;
+        margin: 0 auto;
+    }
+}

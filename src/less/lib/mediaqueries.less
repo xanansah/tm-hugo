@@ -1,0 +1,52 @@
+@desktop-screen: 1280px;
+@tablet-screen: 1024px;
+@mobile-screen: 600px;
+
+@screen-S: ~"only screen and (max-width: @{mobile-screen})";
+@screen-M: ~"only screen and (min-width: "(@mobile-screen + 1) ~") and (max-width: @{tablet-screen})";
+@screen-L: ~"only screen and (min-width: "(@tablet-screen + 1) ~") and (max-width: "(@desktop-screen - 1) ~")";
+@screen-M-plus: ~"only screen and (min-width: "(@mobile-screen + 1) ~")";
+@screen-L-plus: ~"only screen and (min-width: "(@tablet-screen + 1) ~")";
+@screen-M-less: ~"only screen and (max-width: @{tablet-screen})";
+@screen-L-less: ~"only screen and (max-width: "(@desktop-screen - 1) ~")";
+@screen-XL: ~"only screen and (min-width: @{desktop-screen})";
+
+.only-M-less {
+    @media @screen-L-plus {
+        display: none !important;
+    }
+}
+
+.only-M {
+    @media @screen-L-plus {
+        display: none !important;
+    }
+
+    @media @screen-S {
+        display: none !important;
+    }
+}
+
+.only-M-plus {
+    @media @screen-S {
+        display: none !important;
+    }
+}
+
+.only-L-plus {
+    @media @screen-M-less {
+        display: none !important;
+    }
+}
+
+.only-S {
+    @media @screen-M-plus {
+        display: none !important;
+    }
+}
+
+.only-XL {
+    @media @screen-L-less {
+        display: none !important;
+    }
+}

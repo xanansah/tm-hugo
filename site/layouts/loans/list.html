@@ -2,22 +2,29 @@
   {{ partial "head" . }}
 
   <body>
+    {{ partial "tm-global-nav" . }}
+    {{ partial "header" . }}
     {{ partial "nav" . }}
 
     {{ .Content }}
 
     {{ $paginator := .Paginate (where .Pages "Type" "loans") }}
-    {{ range $paginator.Pages }}
-      <div style="border: 1px solid black; margin:10px; padding:10px; ">
-        <div style="font-size:20px;"><a href="{{ .URL }}">{{ .Title }}</a></div>
-        <div style="color:grey; font-size:16px;">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</div>
-        <div style="color:grey; font-size:16px;">{{ if .Params.tags }}<strong>Tags:</strong> {{range .Params.tags}}<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-        <div style="color:grey; font-size:16px;">{{ if .Params.categories }}<strong>Categories:</strong> {{range .Params.categories}}<a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
-        <p style="font-size:18px;">{{ truncate 100 .Summary }}</p>
+      <div style="margin:15px;max-width:1200px;margin: 15px auto;">
+        {{ range $paginator.Pages }}
+          <div class="card-container">
+            <div class="card-li">
+              <p style="font-weight:bold;">{{ .Params.service }}</p>
+              <h5 class="card-li__header">{{ .Title }}</h5>
+              <p>{{ truncate 200 .Summary }}</p>
+              <div class="card-li__cta">
+                <a class="btn btn--primary" href="{{ .URL }}">Read More</a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
       </div>
-    {{ end }}
-    {{ template "_internal/pagination.html" . }}
+    {{ partial "pagination.html" . }}
 
-    {{ partial "footer" . }}
+    {{ partial "tm-footer" . }}
   </body>
 </html>

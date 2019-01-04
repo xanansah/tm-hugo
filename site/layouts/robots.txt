@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /some-path/
+
+{{ range where .Pages "Params.robotsdisallow" true }}
+Disallow: {{ .RelPermalink }}
+{{ end }}

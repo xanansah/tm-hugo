@@ -1,0 +1,28 @@
+<html>
+  {{ partial "head" . }}
+
+  <body>
+    {{ partial "nav" . }}
+
+    {{ .Content }}
+
+    <div style="margin:15px;max-width:1200px;margin: 15px auto;">
+      {{ $paginator := .Paginate .Site.Pages }}
+      {{ range $paginator.Pages }}
+        <div class="card-container">
+          <div class="card-li">
+            <p style="font-weight:bold;">{{ .Params.service }}</p>
+            <h5 class="card-li__header">{{ .Title }}</h5>
+            <p>{{ truncate 200 .Summary }}</p>
+            <div class="card-li__cta">
+              <a class="btn btn--primary" href="{{ .URL }}">Read More</a>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+      {{ partial "pagination.html" . }}
+    </div>
+
+   {{ partial "tm-footer" . }}
+  </body>
+</html>

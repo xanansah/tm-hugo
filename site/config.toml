@@ -1,11 +1,13 @@
-baseURL = "/"
+baseURL = "/guides"
 languageCode = "en-gb"
 title = "TotallyMoney"
 theme = "ga-hugo-theme"
-paginate = 3
+paginate = 5
 paginatePath = "guides"
 destination = "../dist"
 disableKinds = [ "taxonomyTerm" ]
+
+enableRobotsTXT = "true"
 
 [ taxonomies ]
   tag = "tags"
@@ -13,18 +15,18 @@ disableKinds = [ "taxonomyTerm" ]
 
 [ menu ]
   [[ menu.main ]]
-    name = "Guides Home"
+    name = "Home"
     title = "Guides Home"
     weight = 1
     identifier = "home"
-    url = "/"
+    url = "/guides"
 
   [[ menu.main ]]
     name = "Credit Report"
     title = "Credit Report"
     weight = 2
     identifier = "free-credit-report"
-    url = "/free-credit-report/"
+    url = "/free-credit-report/guides/"
 
 
   [[ menu.main ]]
@@ -32,21 +34,21 @@ disableKinds = [ "taxonomyTerm" ]
     title = "Credit Cards"
     weight = 3
     identifier = "credit-cards"
-    url = "/credit-cards/"
+    url = "/credit-cards/guides/"
 
   [[ menu.main ]]
     name = "Loans"
     title = "Loans"
     weight = 4
     identifier = "loans"
-    url = "/loans/"
+    url = "/loans/guides/"
 
   [[ menu.main ]]
     name = "Mortgages"
     title = "Mortgages"
     weight = 5
     identifier = "mortgages"
-    url = "/mortgages/"
+    url = "/mortgages/guides/"
 
 [ params ]
   description = "Take control with access to your full credit report. No credit card needed. See the best credit offers you could get on credit cards, loans &amp; mortgages."

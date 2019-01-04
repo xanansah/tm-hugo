@@ -1,10 +1,35 @@
-{{ range .Site.Menus.main }}
-   <a href="{{ .URL }}" title="{{ .Name }}">
-     {{- .Name -}}
-     {{/* {{- with .i -}}
-       <span class="date">
-       {{- dateFormat " (2006-01-02)" .Date -}}
-       </span>
-     {{- end -}} */}}
-   </a>
- {{ end }}
+<div class="gradient-header">
+  <div class="category-name-container">
+    <div class="category-navbar only-L-plus">
+      <div class="button-wrapper">
+        {{ $currentPage := . }}
+        {{ $section := .Section }}
+        {{ $isHome := eq $section "" }}
+        {{ range .Site.Menus.main | first 1 }}
+          <a href="{{ .URL }}" title="{{ .Name }}">
+            <button class="category-button {{ if $isHome }}category-button--active{{ end }}">
+              {{- .Name -}}
+            </button>
+          </a>
+        {{ end }}
+        {{ range .Site.Menus.main | after 1 }}
+          <a href="{{ .URL }}" title="{{ .Name }}">
+            <button class="category-button {{ if and (not $isHome) (in .URL $section) }}category-button--active{{ end }}">
+              {{- .Name -}}
+            </button>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="styled-select only-M-less">
+      <select>
+        {{ range .Site.Menus.main | first 1 }}
+          <option value="{{ .URL }}" {{ if $isHome }}selected{{ end }}>{{- .Name -}}</option>
+        {{ end }}
+        {{ range .Site.Menus.main | after 1}}
+          <option value="{{ .URL }}" {{ if and (not $isHome) (in .URL $section) }}selected{{ end }}>{{- .Name -}}</option>
+        {{ end }}
+      </select>
+    </div>
+  </div>
+</div>

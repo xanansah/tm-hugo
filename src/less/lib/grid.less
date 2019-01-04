@@ -1,0 +1,72 @@
+@num-of-columns: 12;
+@gutter-width: 1%;
+
+.cf {
+  *zoom: 1; // IE6+7 - trigger hasLayout and contain floats
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.col(@column-num) {
+  display: inline-block;
+  width: (100% / @num-of-columns) * @column-num;
+}
+
+.col-gut(@column-num) {
+  display: inline-block;
+  width: ((100% / @num-of-columns) * @column-num) - @gutter-width;
+  margin-left: (@gutter-width / 2);
+  margin-right: (@gutter-width / 2);
+}
+
+.col-gut-left(@column-num) {
+  display: inline-block;
+  width: ((100% / @num-of-columns) * @column-num) - @gutter-width;
+  margin-left: (@gutter-width);
+  margin-right: 0;
+}
+
+.col-gut-right(@column-num) {
+  display: inline-block;
+  width: ((100% / @num-of-columns) * @column-num) - @gutter-width;
+  margin-right: (@gutter-width);
+  margin-left: 0;
+}
+
+.col-gut-full(@column-num) {
+  display: inline-block;
+  width: ((100% / @num-of-columns) * @column-num) - (@gutter-width * 2);
+  margin-left: (@gutter-width);
+  margin-right: (@gutter-width);
+
+}
+
+.row {
+  .cf;
+  width: 100%;
+}
+
+.container {
+  .cf;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: ~"calc(100% - 30px)";
+}
+
+.container-smaller {
+  .cf;
+  margin: 0 auto;
+  max-width: 670px;
+  width: ~"calc(100% - 30px)";
+}
+
+.hidden {
+  display: none !important;
+}

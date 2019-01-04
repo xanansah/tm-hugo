@@ -3,11 +3,11 @@
 
 name = "ga-hugo-theme"
 license = "MIT"
-description = "A theme used in the Giraffe Academy Hugo course"
+description = "TotallyMoney Guides Theme"
 tags = []
 features = []
 min_version = "0.25.1"
 
 [author]
-  name = "Mike Dane"
-  homepage = "http://www.giraffeacademy.com"
+  name = "TotallyMoney"
+  homepage = ""

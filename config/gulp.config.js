@@ -8,6 +8,7 @@ const newer = require("gulp-newer")
 const path = require("path")
 const { dirname, basename } = require("path")
 const postcss = require("gulp-postcss")
+const less = require('gulp-less')
 const rename = require("gulp-rename")
 const runsequence = require("run-sequence")
 const { spawn } = require("child_process")
@@ -131,6 +132,7 @@ gulp.task("styles:development", cb => {
 
   return gulp
     .src(gulpConfig.styles.src)
+    .pipe(less({ paths: [ path.join(__dirname, 'less', 'includes') ]}))
     .pipe(postcss().on("error", err => log(err, err.toString(), "PostCSS")))
     .pipe(
       rename(path => {

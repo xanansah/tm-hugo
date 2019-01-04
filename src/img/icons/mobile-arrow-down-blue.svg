@@ -1,0 +1,22 @@
+<svg width="20" height="12" xmlns="http://www.w3.org/2000/svg">
+ <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+ <title>ChevronWasabi</title>
+ <desc>Created with Sketch.</desc>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="14" width="22" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g transform="rotate(90 9.666015625000002,5.94768238067627) " stroke-linejoin="round" stroke-linecap="round" fill-rule="evenodd" fill="none" id="Symbols">
+   <g stroke="#303ab2" fill="#303ab2" id="Page/Offers/Highlights/S/Card/Low-Rate---Bold---New-Icon">
+    <g id="Page/Desktop/Offers/Cards---Purchase-Copy-10">
+     <g id="Icon/Chevron">
+      <path transform="translate(-4.688435077667236,-9.345409393310547) " id="ChevronWasabi" d="m16.378675,15.293091l-7.12046,-7.62523l1.77274,-1.50477l0.32532,0.35242l6.88806,7.46208l1.20635,1.3155l-0.3099,0.33793l-0.89756,0.97877l-7.21227,7.8133l-1.77274,-1.50478l7.12046,-7.62522z"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

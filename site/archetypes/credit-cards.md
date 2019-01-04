@@ -18,5 +18,6 @@ author_name: "TotallyMoney"
 author_title: ""
 categories: [ "Credit Cards" ]
 tags: [ "Credit Cards" ]
+robotsdisallow: true
 draft: true
 ---

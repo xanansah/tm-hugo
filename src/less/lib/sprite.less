@@ -1,0 +1,39 @@
+@sprite-base: "../img/icons";
+
+// Use the file's base name _without_ extension to include a sprite.
+// Example: `.sprite('checkmark');` will include the file `images/icons/checkmark.svg`
+// You need to set the size of the sprite in the calling context, not here. SVG sprites can be scaled to any size.
+
+.icon(@name) {
+  @path: "@{sprite-base}/@{name}.svg";
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: data-uri('image/svg+xml;charset=UTF-8;base64', @path);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.circled-icon(@name, @width, @height, @bgColor, @circleDiameter) {
+
+  position: relative;
+  height: @circleDiameter * 1px;
+  width: @circleDiameter * 1px;
+  border-radius: 100%;
+  background: @bgColor;
+  display: inline-block;
+
+  &:after {
+    .icon(@name);
+    height: @height * 1px;
+    width: @width * 1px;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    margin-left: (-@width / 2) * 1px;
+    margin-top: (-@height / 2) * 1px;
+  }
+
+}

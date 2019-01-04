@@ -1,0 +1,50 @@
+.styled-select {
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        .font-size(1.6);
+        font-weight: bold;
+        width: 100%;
+        background: white;
+        color: @text-colour;
+        border-radius: 6px;
+        border: solid 1px @light-grey;
+        padding: .5rem 30px .5rem .5rem;
+        height: 55px;
+        text-align: left;
+        .icon(mobile-arrow-down-blue);
+        background-size: auto 1rem;
+        background-position: right center;
+        background-origin: padding-box;
+        background-position-x: ~"calc(100% - 1rem)";
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        option {
+            white-space: pre-wrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:focus {
+            border: solid 1px @royalblue;
+            .icon(mobile-arrow-down-blue);
+            background-size: auto 1rem;
+            background-position: right center;
+            background-origin: padding-box;
+            background-position-x: ~"calc(100% - 1rem)";
+        }
+
+        @media @screen-L-plus {
+            height: 50px;
+        }
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
