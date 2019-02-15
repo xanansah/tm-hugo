@@ -9,6 +9,7 @@ draft = true
 service = "Credit Cards"
 tags = ["Credit Cards"]
 title = "Twenty"
+social_sharing = true
 [seo.og]
 description = ""
 image_alt = ""
