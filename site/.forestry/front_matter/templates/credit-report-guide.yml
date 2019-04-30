@@ -1,7 +1,6 @@
 ---
 label: Credit Report Guide
 hide_body: false
-is_partial: false
 fields:
 - type: text
   description: Search engine friendly URL. The URL that you want visitors to see.
