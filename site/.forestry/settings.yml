@@ -5,9 +5,8 @@ admin_path: ''
 webhook_url: ''
 sections:
 - type: document
-  path: "./site/content/*"
+  path: "./site/content/_index.md"
   label: Home
-  match: "**/*"
 - type: directory
   path: "./site/content"
   label: Pages
