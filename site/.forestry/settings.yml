@@ -5,9 +5,9 @@ admin_path: ''
 webhook_url: ''
 sections:
 - type: directory
-  path: "./site/content/free-credit-report/**/*"
+  path: "./site/content/free-credit-report"
   label: Beans
-  create: all
+  create: documents
   match: "**/*"
   templates:
   - credit-report-guide
